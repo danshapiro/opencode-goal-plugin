@@ -7,6 +7,10 @@
   "type": "module",
   "module": "index.ts",
   "main": "index.ts",
+  "exports": {
+    ".": "./index.ts",
+    "./v1": "./src/v1.ts"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/danshapiro/opencode-goal-plugin.git"
@@ -41,7 +45,11 @@
     "@opencode-ai/sdk": "1.15.6"
   },
   "devDependencies": {
+    "@opencode/plugin": "^2.0.27",
     "@types/bun": "latest",
     "typescript": "^5.9.0"
+  },
+  "engines": {
+    "opencode": ">=1.15.6"
   }
 }
